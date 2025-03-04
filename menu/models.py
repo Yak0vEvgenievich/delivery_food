@@ -11,6 +11,9 @@ class Categories(models.Model):
         verbose_name = 'Категорию'
         verbose_name_plural = 'Категории'
 
+    def __str__(self):
+        return self.name
+
 
 class Products(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name='Название')
@@ -19,10 +22,11 @@ class Products(models.Model):
     image = models.ImageField(upload_to='menu_images', blank=True, null=True)
     price = models.PositiveIntegerField(default=0, verbose_name='Цена')
     discount = models.PositiveIntegerField(default=0, verbose_name='Скидка')
-    quamtity = models.PositiveIntegerField(default=0, verbose_name='Количество')
     category = models.ForeignKey(to=Categories, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'product'
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
+
+

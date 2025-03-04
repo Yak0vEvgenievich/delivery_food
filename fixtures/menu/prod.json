@@ -1,0 +1,158 @@
+[
+  {
+    "model": "menu.products",
+    "pk": 1,
+    "fields": {
+      "name": "Сет из суши",
+      "slug": "set-iz-sushi",
+      "description": "Комплект из различных видов суши для наслаждения вкусом морепродуктов.",
+      "image": "",
+      "price": 150,
+      "discount": 0,
+      "category": 6
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 2,
+    "fields": {
+      "name": "Роллы с лососем",
+      "slug": "rolly-s-lososem",
+      "description": "Набор роллов с нежным лососем и авокадо, идеален для любителей рыбы.",
+      "image": "",
+      "price": 93,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 3,
+    "fields": {
+      "name": "Острые роллы с тунцом",
+      "slug": "ostrye-rolly-s-tuncom",
+      "description": "Роллы с тунцом и острым соусом, для тех, кто любит пикантные блюда.",
+      "image": "",
+      "price": 670,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 4,
+    "fields": {
+      "name": "Роллы Филадельфия",
+      "slug": "rolly-filadelfiya",
+      "description": "Классические роллы Филадельфия с крем-сыром и огурцом.",
+      "image": "",
+      "price": 365,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 5,
+    "fields": {
+      "name": "Роллы Темпура",
+      "slug": "rolly-tempura",
+      "description": "Роллы с хрустящей темпурой и овощами, отличный выбор для гурманов.",
+      "image": "",
+      "price": 430,
+      "discount": 0,
+      "category": 5
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 6,
+    "fields": {
+      "name": "Дракон Ролл",
+      "slug": "drakon-roll",
+      "description": "Уникальные роллы с угрем и авокадо, настоящая находка для любителей экзотики!",
+      "image": "",
+      "price": 610,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 7,
+    "fields": {
+      "name": "Овощные роллы",
+      "slug": "ovoshnye-rolly",
+      "description": "Легкие овощные роллы, идеальны для вегетарианцев.",
+      "image": "",
+      "price": 55,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 8,
+    "fields": {
+      "name": "Роллы с крабом",
+      "slug": "rolly-s-krabom",
+      "description": "Роллы с крабом и огурцом, для истинных ценителей морепродуктов.",
+      "image": "",
+      "price": 190,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 9,
+    "fields": {
+      "name": "Острые роллы с креветками",
+      "slug": "ostrye-rolly-s-krevetkami",
+      "description": "Роллы с креветками и острым соусом, вкус, который не оставит вас равнодушным.",
+      "image": "",
+      "price": 30,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 10,
+    "fields": {
+      "name": "Веганские роллы",
+      "slug": "veganskie-rolly",
+      "description": "Веганские роллы с авокадо и огурцом, свежий и полезный выбор.",
+      "image": "",
+      "price": 10,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 11,
+    "fields": {
+      "name": "Цветочные роллы",
+      "slug": "cvetochnye-rolly",
+      "description": "Дизайнерские роллы, украшенные съедобными цветами для красивой подачи.",
+      "image": "",
+      "price": 15,
+      "discount": 0,
+      "category": 4
+    }
+  },
+  {
+    "model": "menu.products",
+    "pk": 12,
+    "fields": {
+      "name": "Роллы с ананасом",
+      "slug": "rolly-s-ananasom",
+      "description": "Роллы необычной формы, но с отличным вкусом, подойдут для любителей экспериментов.",
+      "image": "",
+      "price": 25,
+      "discount": 0,
+      "category": 4
+    }
+  }
+]

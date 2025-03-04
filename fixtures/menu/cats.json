@@ -1,0 +1,58 @@
+[
+  {
+    "model": "menu.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Все меню",
+      "slug": "all"
+    }
+  },
+  {
+    "model": "menu.categories",
+    "pk": 4,
+    "fields": {
+      "name": "Холодные роллы",
+      "slug": "holodnie-rolly"
+    }
+  },
+  {
+    "model": "menu.categories",
+    "pk": 5,
+    "fields": {
+      "name": "Темпура",
+      "slug": "tempura"
+    }
+  },
+  {
+    "model": "menu.categories",
+    "pk": 6,
+    "fields": {
+      "name": "Суши",
+      "slug": "sushi"
+    }
+  },
+  {
+    "model": "menu.categories",
+    "pk": 7,
+    "fields": {
+      "name": "Запеченные роллы",
+      "slug": "zapechonie-rolli"
+    }
+  },
+  {
+    "model": "menu.categories",
+    "pk": 8,
+    "fields": {
+      "name": "wok",
+      "slug": "vok"
+    }
+  },
+  {
+    "model": "menu.categories",
+    "pk": 9,
+    "fields": {
+      "name": "Добавки",
+      "slug": "dobavki"
+    }
+  }
+]
