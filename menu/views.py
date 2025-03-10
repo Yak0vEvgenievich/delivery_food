@@ -1,13 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
+
 
 from menu.models import Products
 
 
 # Create your views here.
 
-def catalog(request):
+def catalog(request, category_slug):
 
-    menu = Products.objects.all()
+    if category_slug == 'all':
+        menu = Products.objects.all()
+    else:
+        menu = get_list_or_404(Products.objects.filter(category__slug= category_slug))
+
+
+
 
     context = {
         'title': 'Меню',
@@ -17,5 +24,12 @@ def catalog(request):
     return render(request, 'menu/catalog.html', context)
 
 
-def product(request):
-    return render(request, 'menu/product.html')
+def product(request, product_slug):
+
+    product = Products.objects.get(slug=product_slug)
+
+    context = {
+        'product': product
+    }
+
+    return render(request, 'menu/product.html', context= context)
