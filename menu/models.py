@@ -21,12 +21,18 @@ class Products(models.Model):
     description = models.TextField(blank=True, null=True, verbose_name='Описание')
     image = models.ImageField(upload_to='menu_images', blank=True, null=True)
     price = models.PositiveIntegerField(default=0, verbose_name='Цена')
-    discount = models.PositiveIntegerField(default=0, verbose_name='Скидка')
+    # = models.PositiveIntegerField(default=0, verbose_name='Скидка')
     category = models.ForeignKey(to=Categories, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'product'
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
+
+    def __str__(self):
+        return f'{self.name}'
+
+    def display_id(self):
+        return f"{self.id:03}"
 
 
