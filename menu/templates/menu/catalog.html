@@ -1,6 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
-
+{% load menu_tags %}
 {% block content %}
                     <div class="row">
                         <!-- Форма фильтров -->
@@ -10,17 +10,11 @@
                                 Фильтры
                             </button>
 
-                            <form action="" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
-                                <div class="form-check text-white mx-3">
-                                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
-                                    <input type="hidden" name="q" value="request.GET.q">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Товары по акции
-                                    </label>
-                                </div>
+                            <form action="{% url 'catalog:index' slug_url %}" method="get" class="dropdown-menu bg-dark" data-bs-theme="dark">
+
                                 <p class="text-white mx-3 mt-3">Сортировать:</p>
                                 <div class="form-check text-white mx-3">
-                                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault1" value="default" checked>
+                                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault1" value="default" >
                                     <label class="form-check-label" for="flexRadioDefault1">
                                         По умолчанию
                                     </label>
@@ -74,20 +68,20 @@
                         <ul class="pagination justify-content-center my-4">
                             <div class="custom-shadow d-flex">
                                 <li class="page-item  {% if not menu.has_previous %} disabled {% endif%}">
-                                  <a class="page-link" href="{% if  menu.has_previous %} ?page={{menu.previous_page_number}} {% else %}
+                                  <a class="page-link" href="{% if  menu.has_previous %}?{% change_params page=menu.previous_page_number %} {% else %}
                                   #
                                   {% endif%}">Назад</a>
                                 </li>
 
                                 {% for page in menu.paginator.page_range %}
                                     <li class="page-item">
-                                         <a class="page-link" href="?page={{page}}">{{ page }}</a></li>
+                                         <a class="page-link" href="?{% change_params page=page %}">{{ page }}</a></li>
                                 {% endfor %}
 
 
 
                                 <li class="page-item  {% if not menu.has_next %} disabled {% endif%}">
-                                  <a class="page-link" href="{% if  menu.has_next %} ?page={{menu.next_page_number}} {% else %}
+                                  <a class="page-link" href="{% if  menu.has_next %}?{% change_params page=menu.next_page_number %} {% else %}
                                   #
                                   {% endif%}">Вперед</a>
                                 </li>
