@@ -5,7 +5,9 @@ from menu.models import Products
 
 # Create your views here.
 
-def catalog(request, category_slug, page =1):
+def catalog(request, category_slug):
+
+    page = request.GET.get('page', 1)
 
     if category_slug == 'all':
         menu = Products.objects.all()
@@ -13,7 +15,7 @@ def catalog(request, category_slug, page =1):
         menu = get_list_or_404(Products.objects.filter(category__slug= category_slug))
 
     paginator = Paginator(menu, 6)
-    current_page = paginator.page(page)
+    current_page = paginator.page(int(page))
 
 
 
