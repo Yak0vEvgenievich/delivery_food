@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
+
 
     'main',
     'menu',
@@ -78,11 +80,14 @@ WSGI_APPLICATION = 'sushi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'delivery_food',         # Имя базы данных
+        'USER': 'boss',     # Имя пользователя
+        'PASSWORD': 'postgres',    # Пароль пользователя
+        'HOST': 'localhost',         # Хост (обычно 'localhost')
+        'PORT': '5434',              # Порт (по умолчанию 5432)
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
