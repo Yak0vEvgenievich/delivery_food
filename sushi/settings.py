@@ -83,7 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'delivery_food',         # Имя базы данных
-        'USER': 'boss',     # Имя пользователя
+        'USER': 'postgres',     # Имя пользователя
         'PASSWORD': 'postgres',    # Пароль пользователя
         'HOST': 'localhost',         # Хост (обычно 'localhost')
         'PORT': '5434',              # Порт (по умолчанию 5432)
@@ -142,3 +142,4 @@ INTERNAL_IPS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'users.User'
