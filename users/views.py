@@ -4,7 +4,6 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
-
 from users.forms import UserLoginForm, UserRegisctrationForm, ProfileForm
 
 
@@ -19,6 +18,11 @@ def login(request):
             if user:
                 auth.login(request, user)
                 messages.success(request, f"{username}, Вы вошли в аккаунт")
+
+                # все контроллеры с декоратором будут перенапрвлять на авторизацию
+                if request.POST.get('next', None):
+                    return HttpResponseRedirect(request.POST.get('next'))
+
                 return HttpResponseRedirect(reverse('main:index'))
     else:
         form = UserLoginForm()
@@ -29,6 +33,8 @@ def login(request):
     }
 
     return render(request, 'users/login.html', context)
+
+
 
 
 def registration(request):
@@ -69,6 +75,10 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+
+def users_basket(request):
+    return render(request, 'users/users_basket.html')
 
 @login_required
 def logout(request):
